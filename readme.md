@@ -1,17 +1,16 @@
+# Image to SVG Converter
 
-# 图片转SVG转换器
+This is a simple tool written in Python that can convert an input image into SVG format. The tool utilizes the `vtracer` library for image conversion and the `Gradio` library to create a user-friendly web interface.
 
-这是一个使用Python编写的简单工具，可以将输入的图片转换为SVG格式。该工具使用了`vtracer`库来进行图像转换，并使用`Gradio`库来创建用户友好的网页界面。
+## Features
 
-## 功能
+- Upload images and convert them to SVG format
+- Support configuration of various conversion parameters, such as color mode, hierarchy, pattern, etc.
+- The generated SVG file can be downloaded and saved, and previewed on the page
 
-- 上传图片并转换为SVG格式
-- 支持配置多种转换参数，如颜色模式、层次结构、模式等
-- 生成的SVG文件可以下载保存，并在页面上预览
+## Installation
 
-## 安装
-
-首先，确保你已经安装了Python 3.7或更高版本。然后，克隆此项目并安装依赖项：
+First, make sure you have installed Python 3.7 or a higher version. Then, clone this project and install the dependencies:
 
 ```bash
 git clone https://github.com/XueshuFun/vtracer-web-ui.git
@@ -19,32 +18,29 @@ cd vtracer-web-ui
 pip install -r requirements.txt
 ```
 
-## 使用方法
+## How to Use
 
-运行以下命令启动Gradio界面：
+Run the following command to start the Gradio interface:
 
 ```bash
 python app.py
 ```
 
-这将启动一个本地服务器，并在浏览器中打开一个网页界面。在该界面中，你可以上传图片并配置转换参数，点击“提交”按钮生成并下载SVG文件。
+This will launch a local server and open a web page interface in your browser. In this interface, you can upload images and configure conversion parameters, and click the "Submit" button to generate and download the SVG file.
 
 ![](https://cdn.xueshu.fun/202406042142637.png)
 
-## 参数说明
+## Parameter Explanation
 
-- **输入图片**: 上传你要转换的图片文件。
-- **颜色模式**: 选择颜色模式，可以是“彩色”或“单色”。
-- **层次结构**: 选择层次结构，可以是“堆叠”或“剪切”。
-- **模式**: 选择转换模式，可以是“样条”、“多边形”或“无”。
-- **滤波斑点**: 设置滤波斑点的值，范围是0到10。
-- **颜色精度**: 设置颜色精度的值，范围是0到10。
-- **层差**: 设置层差的值，范围是0到30。
-- **角点阈值**: 设置角点阈值的值，范围是0到100。
-- **长度阈值**: 设置长度阈值的值，范围是3.5到10。
-- **最大迭代次数**: 设置最大迭代次数，范围是1到20。
-- **拼接阈值**: 设置拼接阈值的值，范围是0到90。
-- **路径精度**: 设置路径精度的值，范围是1到10。
-
-
-
+- **Input Image**: Upload the image file you want to convert.
+- **Color Mode**: Choose the color mode, which can be "Color" or "Monochrome".
+- **Hierarchy**: Choose the hierarchy, which can be "Stack" or "Cut".
+- **Mode**: Choose the conversion mode, which can be "Spline", "Polygon", or "None".
+- **Filter Speckles**: Set the value for filtering speckles, ranging from 0 to 10.
+- **Color Precision**: Set the value for color precision, ranging from 0 to 10.
+- **Layer Difference**: Set the value for layer difference, ranging from 0 to 30.
+- **Corner Threshold**: Set the value for corner threshold, ranging from 0 to 100.
+- **Length Threshold**: Set the value for length threshold, ranging from 3.5 to 10.
+- **Maximum Iterations**: Set the number of maximum iterations, ranging from 1 to 20.
+- **Stitching Threshold**: Set the value for stitching threshold, ranging from 0 to 90.
+- **Path Precision**: Set the value for path precision, ranging from 1 to 10.
